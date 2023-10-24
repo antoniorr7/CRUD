@@ -3,11 +3,12 @@
 
 <head>
     <title>CRUD de Nombres y Frases</title>
+        <link rel="stylesheet" href="crud.css">
 </head>
 
 <body>
 
-    <h1>CRUD de Nombres y Frases</h1>
+    <h1>CRUD de Nombres y Firmas</h1>
 
     <!-- Formulario para añadir un registro -->
     <div>
