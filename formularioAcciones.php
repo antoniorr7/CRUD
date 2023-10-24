@@ -63,7 +63,7 @@
 
         $jesuitas= new Crud( $servidor, $username,$password,$basedatos);
         if (isset($_POST['accion'])) {
-            $accion = $_POST['accion'];
+            $accion = $_POST['accion'];// Utilizo un campo Hidden para poder ver la accion que pulsa con el input 
 
             if ($accion === 'agregar') {
                 $nombre = $_POST['nombre'];
@@ -80,9 +80,6 @@
             }elseif ($accion === 'listar') {
                 $resultado = $crud->listar();
             }
-
-
-
         } else {
             echo "<h2>Edicion de Contenido Jesuita</h2>";
         }
