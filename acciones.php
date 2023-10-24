@@ -2,7 +2,7 @@
 class CRUD {
     private $conexion;
 
-    public function __construct($host, $usuario, $contrasena, $base_de_datos) {
+    public function __construct($host, $usuario, $contrasena, $base_de_datos) { 
         $this->conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
     }
 
@@ -23,6 +23,6 @@ class CRUD {
 
     public function listar() {
         $result = $this->conexion->query("SELECT idJesuita, nombre, firma FROM jesuita");
-        return $result->fetch_all(MYSQLI_ASSOC); // devuelve los datos en array asociativo
+        return   $result->fetch_all(MYSQLI_ASSOC); // devuelve los datos en array asociativo
     }
 }
