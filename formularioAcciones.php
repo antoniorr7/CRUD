@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>CRUD de Nombres y Frases</title>
+    <title>CRUD de Nombres y firmas</title>
         <link rel="stylesheet" href="crud.css">
 </head>
 
@@ -16,8 +16,8 @@
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
-        <label for="frase">Frase:</label>
-        <input type="text" id="frase" name="frase" required>
+        <label for="firma">firma:</label>
+        <input type="text" id="firma" name="firma" required>
         <br>
         <button type="submit">Añadir</button>
     </form>
@@ -29,8 +29,8 @@
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
-        <label for="frase">Frase:</label>
-        <input type="text" id="frase" name="frase" required>
+        <label for="firma">firma:</label>
+        <input type="text" id="firma" name="firma" required>
         <br>
         <button type="submit">modificar</button>
     </form>
@@ -41,8 +41,8 @@
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
-        <label for="frase">Frase:</label>
-        <input type="text" id="frase" name="frase" required>
+        <label for="firma">firma:</label>
+        <input type="text" id="firma" name="firma" required>
         <br>
         <button type="submit">borrar</button>
     </form>
