@@ -1,25 +1,28 @@
 <?php
 class CRUD {
-    // Atributos de la Clase 
+    private $conexion;
 
-
-        //Método añadir
-    public function agregar() {
-
+    public function __construct($host, $usuario, $contrasena, $base_de_datos) {
+        $this->conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
     }
 
-    // Método modificar 
-    public function modificar() {
-    
+    public function agregar($id, $nombre, $firma) {
+        $query = "INSERT INTO jesuita (idJesuita, nombre, firma) VALUES ('$id', '$nombre', '$firma')";
+        return $this->conexion->query($query);
     }
 
-    // Método borrar 
-    public function borrar($indice) {
+    public function modificar($id, $nombre, $firma) {
+        $query = "UPDATE jesuita SET nombre = '$nombre', firma = '$firma' WHERE idJesuita = $id";
+        return $this->conexion->query($query);
     }
 
-    // Método listar
+    public function borrar($id) {
+        $query = "DELETE FROM jesuita WHERE idJesuita = $id";
+        return $this->conexion->query($query);
+    }
 
     public function listar() {
-
+        $result = $this->conexion->query("SELECT idJesuita, nombre, firma FROM jesuita");
+        return $result->fetch_all(MYSQLI_ASSOC); // devuelve los datos en array asociativo
     }
 }
