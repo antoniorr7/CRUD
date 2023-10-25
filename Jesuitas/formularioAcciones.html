@@ -14,7 +14,6 @@
             <br>
             <label for="firma">Firma:</label>
             <input type="text" id="firma" name="firma" required>
-            <input type="hidden" name="accion" value="añadir">
 
             <br>
             <input type="submit" value="Añadir" >
@@ -30,7 +29,7 @@
             <br>
             <label for ="firma">Firma:</label>
             <input type="text" id="firma" name="firma" required>
-            <input type="hidden" name="accion" value="modificar">
+        
             <br>
             <input type="submit" value="Actualizar">
         </form>
@@ -40,7 +39,7 @@
         <form action="borrarJesuita.php" method="POST">
             <label for="id">id:</label>
             <input type="number" id="id" name="id" required>
-            <input type="hidden" name="accion" value="borrar">
+            
             <br>
             <input type="submit" value="Borrar">
         </form>
@@ -49,7 +48,6 @@
     <div>
         <form action="listar.php" method="POST">
             <label for="nombre">Listar toda la Lista de Jesuitas:</label>
-            <input type="hidden" name="accion" value="listar">
             <br>
             <input type="submit" value="listar">
         </form>
