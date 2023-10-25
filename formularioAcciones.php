@@ -49,40 +49,55 @@
             <label for="nombre">Listar toda la Lista de Jesuitas:</label>
             <input type="hidden" name="accion" value="listar">
             <br>
-            <input type="submit" value="Listar">
+            <input type="submit" value="listar">
         </form>
     </div>
 
     <?php
-    require 'acciones.php';
+    include 'acciones.php';
 
     $servidor='localhost';
     $username='root';
     $password='';
     $basedatos='jesuitas';
 
-        $jesuitas= new Crud( $servidor, $username,$password,$basedatos);
+        $crud= new Gestion( $servidor, $username,$password,$basedatos);
+        
         if (isset($_POST['accion'])) {
-            $accion = $_POST['accion'];// Utilizo un campo Hidden para poder ver la accion que pulsa con el input 
+            $accion = $_POST['accion']; // Utilizo un campo Hidden para poder ver la acción que pulsa con el input
+        
+            switch ($accion) {
+                case 'agregar':
+                    $nombre = $_POST['nombre'];
+                    $firma = $_POST['firma'];
+                    $resultado = $crud->agregar($nombre, $firma);
+                    break;
+        
+                case 'modificar':
+                    $id = $_POST['id'];
+                    $nombre = $_POST['nombre'];
+                    $firma = $_POST['firma'];
+                    $resultado = $crud->modificar($id, $nombre, $firma);
+                    break;
+        
+                case 'borrar':
+                    $id = $_POST['id'];
+                    $resultado = $crud->borrar($id);
+                    break;
+        
+                case 'listar':
+                    $resultado = $crud->listar();
+        
+                    foreach ($resultado as $fila) {
+                        echo "ID: " . $fila['idJesuita'] . ", Nombre: " . $fila['nombre'] . ", Firma: " . $fila['firma'] . "<br>";
+                    }
 
-            if ($accion === 'agregar') {
-                $nombre = $_POST['nombre'];
-                $firma = $_POST['firma'];
-                $resultado = $crud->agregar($nombre, $firma);
-            } elseif ($accion === 'modificar') {
-                $id = $_POST['id'];
-                $nombre = $_POST['nombre'];
-                $firma = $_POST['firma'];
-                $resultado = $crud->modificar($id, $nombre, $firma);
-            } elseif ($accion === 'borrar') {
-                $id = $_POST['id'];
-                $resultado = $crud->borrar($id);
-            }elseif ($accion === 'listar') {
-                $resultado = $crud->listar();
+                    break;
             }
         } else {
-            echo "<h2>Edicion de Contenido Jesuita</h2>";
+            echo "<h2>Edición de Contenido Jesuita</h2>";
         }
+        
         
     ?>
     

@@ -1,5 +1,6 @@
 <?php
-class CRUD {
+class Gestion {
+    
     private $conexion;
 
     public function __construct($host, $usuario, $contrasena, $base_de_datos) { 
@@ -20,9 +21,18 @@ class CRUD {
         $query = "DELETE FROM jesuita WHERE idJesuita = $id";
         return $this->conexion->query($query);
     }
-
-    public function listar() {
-        $result = $this->conexion->query("SELECT idJesuita, nombre, firma FROM jesuita");
-        return   $result->fetch_all(MYSQLI_ASSOC); // devuelve los datos en array asociativo
+    public function listar(){
+        $query = "SELECT * FROM jesuita"; 
+    
+        $resultado = $this->conexion->query($query); 
+    
+        $lugares = [];
+        
+        foreach ($resultado as $row) {
+            $lugares[] = $row;
+        }
+    
+        return $lugares;
     }
+    
 }
