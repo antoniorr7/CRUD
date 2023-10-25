@@ -13,13 +13,11 @@ $basedatos='jesuitas';
         $accion = $_POST['accion']; // Utilizo un campo Hidden para poder ver la acción que pulsa con el input
     
         switch ($accion) {
-
-            case 'listar':
-                $resultado = $crud->listar();
-                foreach ($resultado as $fila) {
-                    echo "ID: " . $fila['idJesuita'] . ", Nombre: " . $fila['nombre'] . ", Firma: " . $fila['firma'] . "<br><br><br>";
-                }
-
-                break;
+            case 'añadir':
+                $id= $_POST['id'];
+                $nombre = $_POST['nombre'];
+                $firma = $_POST['firma'];
+                $resultado = $crud->añadir($id,$nombre, $firma);
+                echo "ID: $id, Nombre: $nombre, Firma: $firma<br>";
         }
-    } 
+    }

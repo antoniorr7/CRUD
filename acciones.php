@@ -7,7 +7,7 @@ class Gestion {
         $this->conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
     }
 
-    public function agregar($id, $nombre, $firma) {
+    public function añadir($id, $nombre, $firma) {
         $query = "INSERT INTO jesuita (idJesuita, nombre, firma) VALUES ('$id', '$nombre', '$firma')";
         return $this->conexion->query($query);
     }
