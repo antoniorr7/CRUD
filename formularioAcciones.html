@@ -22,7 +22,9 @@
     </div>
     <br><br>
     <div>
-        <form action="acciones.php" method="POST">
+        <form action="modificarJesuita.php" method="POST">
+            <label for="id">id:</label>
+            <input type="number" id="id" name="id" required>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             <br>
@@ -35,12 +37,9 @@
     </div>
     <br><br>
     <div>
-        <form action="acciones.php" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <br>
-            <label for="firma">Firma:</label>
-            <input type="text" id="firma" name="firma" required>
+        <form action="borrarJesuita.php" method="POST">
+            <label for="id">id:</label>
+            <input type="number" id="id" name="id" required>
             <input type="hidden" name="accion" value="borrar">
             <br>
             <input type="submit" value="Borrar">
