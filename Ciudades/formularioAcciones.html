@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <div>
+        <form action="añadirCiudad.php" method="POST">
+            <label for="ip">ip:</label>
+            <input type="text" ip="ip" name="ip" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" ip="nombre" name="nombre" required>
+            <br>
+            <label for="descripcion">descripcion:</label>
+            <input type="text" ip="descripcion" name="descripcion" required>
+            <input type="hidden" name="accion" value="añadir">
+
+            <br>
+            <input type="submit" value="Añadir" >
+        </form>
+    </div>
+    <br><br>
+    <div>
+        <form action="modificarCiudad.php" method="POST">
+            <label for="ip">ip:</label>
+            <input type="text" ip="ip" name="ip" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" ip="nombre" name="nombre" required>
+            <br>
+            <label for ="descripcion">descripcion:</label>
+            <input type="text" ip="descripcion" name="descripcion" required>
+            <input type="hidden" name="accion" value="modificar">
+            <br>
+            <input type="submit" value="Actualizar">
+        </form>
+    </div>
+    <br><br>
+    <div>
+        <form action="borrarCiudad.php" method="POST">
+            <label for="ip">ip:</label>
+            <input type="number" ip="ip" name="ip" required>
+            <input type="hidden" name="accion" value="borrar">
+            <br>
+            <input type="submit" value="Borrar">
+        </form>
+    </div>
+
+    <div>
+        <form action="listar.php" method="POST">
+            <label for="nombre">Listar toda la Lista de Ciudades:</label>
+            <input type="hidden" name="accion" value="listar">
+            <br>
+            <input type="submit" value="listar">
+        </form>
+    </div>
+
+</body>
+</html>

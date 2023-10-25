@@ -26,10 +26,10 @@ class Gestion {
     
         $resultado = $this->conexion->query($query); 
     
-        $lugares = [];
+        $jesuita = [];
         
         foreach ($resultado as $row) {
-            $lugares[] = $row;
+            $jesuita[] = $row;
         }
     
         return $lugares;
