@@ -1,10 +1,9 @@
 <?php
 class Gestion {
-    
-    private $conexion;
 
-    public function __construct($host, $usuario, $contrasena, $base_de_datos) { 
-        $this->conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
+    public function __construct() { 
+        include 'config_db.php';
+        $this->conexion = new mysqli(HOST, USER, PASSWORD, DATABASE);
     }
 
     public function añadir($id, $nombre, $firma) {
@@ -32,7 +31,7 @@ class Gestion {
             $jesuita[] = $row;
         }
     
-        return $lugares;
+        return $jesuita;
     }
     
 }
