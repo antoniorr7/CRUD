@@ -2,7 +2,7 @@
 class Gestion {
 
     public function __construct() { 
-        include 'config_db.php';
+        require 'config_db.php';
         $this->conexion = new mysqli(HOST, USER, PASSWORD, DATABASE);
     }
 
@@ -32,6 +32,5 @@ class Gestion {
         }
     
         return $jesuita;
-    }
-    
+    }   
 }
