@@ -10,5 +10,3 @@ require 'acciones.php';
                 foreach ($resultado as $fila) {
                     echo "ID: " . $fila['idJesuita'] . ", Nombre: " . $fila['nombre'] . ", Firma: " . $fila['firma'] . "<br><br><br>";
                 }
-
-    
