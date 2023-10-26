@@ -1,8 +1,9 @@
 <?php
+
 class Lugar {
     
     public function __construct() { 
-        require 'config_db.php'
+        require 'config_db.php';
         $this->conexion = new mysqli(HOST, USER, PASSWORD, DATABASE);
     }
 
