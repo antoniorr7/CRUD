@@ -4,7 +4,7 @@ include 'acciones.php';
 
 
 
-    $crud= new Gestion( $servidor, $username,$password,$basedatos);
+    $crud= new Gestion();
 
                 $id= $_POST['id'];
                 $nombre = $_POST['nombre'];
