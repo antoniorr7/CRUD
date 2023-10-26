@@ -2,12 +2,8 @@
 
 include 'acciones.php';
 
-$servidor='localhost';
-$username='root';
-$password='';
-$basedatos='jesuitas';
 
-    $crud= new Lugar( $servidor, $username,$password,$basedatos);
+    $crud= new Lugar();
     
 
                 $ip= $_POST['ip'];

@@ -2,8 +2,6 @@
 
 require 'acciones.php';
 
-
-
     $crud= new Gestion();
     
     

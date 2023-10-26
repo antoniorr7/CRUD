@@ -2,10 +2,7 @@
 
 include 'acciones.php';
 
-$servidor='localhost';
-$username='root';
-$password='';
-$basedatos='jesuitas';
+
 
     $crud= new Gestion( $servidor, $username,$password,$basedatos);
 
