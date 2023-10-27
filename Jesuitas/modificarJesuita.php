@@ -1,11 +1,14 @@
-<?php
 
+
+
+
+<?php
+    
 include 'acciones.php';
 
 
     $crud= new Gestion();
     
-
                 $id= $_POST['id'];
                 $nombre = $_POST['nombre'];
                 $firma = $_POST['firma'];

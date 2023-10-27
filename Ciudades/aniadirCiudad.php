@@ -13,3 +13,4 @@ include 'acciones.php';
                 $descripcion = $_POST['descripcion'];
                 $resultado = $crud->añadir($ip,$nombre, $descripcion);
                 echo "IP: $ip, Nombre: $nombre, descripcion: $descripcion<br>";
+        

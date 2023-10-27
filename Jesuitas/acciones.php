@@ -30,7 +30,7 @@ class Gestion {
         foreach ($resultado as $row) {
             $jesuita[] = $row;
         }
-    
+
         return $jesuita;
     }   
 }
