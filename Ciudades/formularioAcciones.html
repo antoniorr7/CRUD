@@ -7,13 +7,13 @@
 <body>
     <div>
         <form action="aniadirCiudad.php" method="POST">
-            <label for="ip">ip:</label>
-            <input type="text" ip="ip" name="ip" required>
+            <label for="id">ip:</label>
+            <input type="text" id="ip" name="ip" required>
             <label for="nombre">Nombre:</label>
-            <input type="text" ip="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required>
             <br>
             <label for="descripcion">descripcion:</label>
-            <input type="text" ip="descripcion" name="descripcion" required>
+            <input type="text" id="descripcion" name="descripcion" required>
             <input type="hidden" name="accion" value="añadir">
             <br>
             <input type="submit" value="Añadir" >
@@ -23,12 +23,12 @@
     <div>
         <form action="modificarCiudad.php" method="POST">
             <label for="ip">ip:</label>
-            <input type="text" ip="ip" name="ip" required>
+            <input type="text" id="ip" name="ip" required>
             <label for="nombre">Nombre:</label>
-            <input type="text" ip="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required>
             <br>
             <label for ="descripcion">descripcion:</label>
-            <input type="text" ip="descripcion" name="descripcion" required>
+            <input type="text" id="descripcion" name="descripcion" required>
     
             <br>
             <input type="submit" value="Actualizar">
@@ -38,7 +38,7 @@
     <div>
         <form action="borrarCiudad.php" method="POST">
             <label for="ip">ip:</label>
-            <input type="text" ip="ip" name="ip" required>
+            <input type="text" id="ip" name="ip" required>
 
             <br>
             <input type="submit" value="Borrar">
